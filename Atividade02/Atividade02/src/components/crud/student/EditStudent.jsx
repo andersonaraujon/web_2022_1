@@ -14,7 +14,9 @@ const EditStudent = () => {
     setName(student.name);
     setCourse(student.course);
     setIra(student.ira);
-  });
+  },
+    [params.id]
+  );
 
   const handleSubmit = (event) => {
     //aqui código de comunicação com o backend
@@ -40,7 +42,7 @@ const EditStudent = () => {
           <input
             type="text"
             className="form-control"
-            value={course == null || course == undefined ? "" : course}
+            value={course == null || course === undefined ? "" : course}
             name="course"
             onChange={(event) => setCourse(event.target.value)}
           />
@@ -50,7 +52,7 @@ const EditStudent = () => {
           <input
             type="text"
             className="form-control"
-            value={ira == null || ira == undefined ? "" : ira}
+            value={ira == null || ira === undefined ? "" : ira}
             name="ira"
             onChange={(event) => setIra(event.target.value)}
           />

@@ -14,7 +14,9 @@ const EditProfessor = () => {
     setName(professor.name);
     setUniversity(professor.university);
     setDegree(professor.degree);
-  });
+  },
+    [params.id]
+  );
 
   const handleSubmit = (event) => {
     //aqui código de comunicação com o backend
@@ -40,7 +42,7 @@ const EditProfessor = () => {
           <input
             type="text"
             className="form-control"
-            value={university == null || university == undefined ? "" : university}
+            value={university == null || university === undefined ? "" : university}
             name="university"
             onChange={(event) => setUniversity(event.target.value)}
           />
@@ -50,7 +52,7 @@ const EditProfessor = () => {
           <input
             type="text"
             className="form-control"
-            value={degree == null || degree == undefined ? "" : degree}
+            value={degree == null || degree === undefined ? "" : degree}
             name="degree"
             onChange={(event) => setDegree(event.target.value)}
           />

@@ -50,14 +50,14 @@ function App() {
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a className="dropdown-item" href="/createStudent">
-                    Criar Estudante
-                  </a>
+                  <Link to="/createStudent" className="dropdown-item">
+                      Criar Estudante
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/listStudent">
-                    Listar Estudantes
-                  </a>
+                  <Link to="/listStudent" className="dropdown-item">
+                      Listar Estudantes
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -77,14 +77,14 @@ function App() {
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a className="dropdown-item" href="/createProfessor">
-                    Criar Professor
-                  </a>
+                  <Link to="/createProfessor" className="dropdown-item">
+                      Criar Professor
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/listProfessor">
-                    Listar Professores
-                  </a>
+                  <Link to="/listProfessor" className="dropdown-item">
+                      Listar Professores
+                  </Link>
                 </li>
               </ul>
             </li>
